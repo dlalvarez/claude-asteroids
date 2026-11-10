@@ -24,5 +24,6 @@ All game logic lives in `game.js` (loaded by `index.html` via a plain `<script>`
 
 ## Notes
 
-- The README still mentions power-ups and a "shooting star" asteroid; these were removed from the code (commit `13e713f`) and don't exist.
+- The one power-up is **Disparo Triple**: `PowerUp` drops (12% chance per destroyed asteroid, at most once per round/level via `powerUpSpawned`, reset in `initGame()` and `nextLevel()`) and, when the ship touches it, `tripleShotTimer` runs 5s making `Ship.tryShoot(true)` fire 3 bullets in a fan. Lost on death.
+- The README still mentions other power-ups and a "shooting star" asteroid; these were removed from the code (commit `13e713f`) and don't exist.
 - The README demo link points to a GitHub Pages deployment of the upstream repo.
